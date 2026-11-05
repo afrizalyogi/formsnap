@@ -75,7 +75,7 @@ At a minimum we need to import the [Field](/docs/components/field), [Control](/d
 	import { superForm } from "sveltekit-superforms";
 	import { zodClient } from "sveltekit-superforms/adapters";
 	import { Field, Control, Label, FieldErrors } from "formsnap";
-	import { schema } from "./schema.js";
+	import { schema, flavors, toppings } from "./schema.js";
 
 	let { data } = $props();
 

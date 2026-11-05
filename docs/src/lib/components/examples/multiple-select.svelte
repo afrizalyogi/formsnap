@@ -66,7 +66,7 @@
 								multiple
 								bind:value={$formData.flavors}
 								{...props}
-								class="w-[200px]"
+								class="border-accent bg-background dark:bg-muted h-24 w-[200px] rounded-md border px-3 py-2 text-sm"
 							>
 								{#each flavors as flavor}
 									<option
@@ -92,7 +92,7 @@
 							multiple
 							bind:value={$formData.toppings}
 							{...props}
-							class="w-[200px]"
+							class="border-accent bg-background dark:bg-muted h-24 w-[200px] rounded-md border px-3 py-2 text-sm"
 						>
 							{#each toppings as topping}
 								<option
