@@ -5,6 +5,7 @@ on:
         branches:
             - main
             - next
+            - ci/**
         paths-ignore:
             - ".changeset/**"
             - README.md
@@ -54,3 +55,20 @@ jobs:
               run: pnpm install
 
             - run: pnpm lint
+
+    Build:
+        runs-on: macos-latest
+        name: Build docs
+        steps:
+            - uses: actions/checkout@v4
+            - uses: pnpm/action-setup@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: pnpm
+
+            - name: Install dependencies
+              run: pnpm install
+
+            - name: Build site
+              run: pnpm build
